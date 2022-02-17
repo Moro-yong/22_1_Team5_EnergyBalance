@@ -1,16 +1,18 @@
+import SearchResult from '../searchresult/SearchResult';
 import * as S from './OverAndUnder_Style';
+import OverStatistics from './OverStatistics';
+import UnderStatistics from './UnderStatistics';
 
 export default function OverAndUnder() {
   return (
-    <S.Countainer>
-      <S.OverAndUnderWrap>
-        <S.OverWrap>
-          <S.Over>초과</S.Over>
-        </S.OverWrap>
-        <S.UnderWrap>
-          <S.Under>미달</S.Under>
-        </S.UnderWrap>
-      </S.OverAndUnderWrap>
-    </S.Countainer>
+    <>
+      <S.Countainer>
+        <S.OverAndUnderWrap>
+          <OverStatistics />
+          <UnderStatistics />
+        </S.OverAndUnderWrap>
+      </S.Countainer>
+      <SearchResult />
+    </>
   );
 }
