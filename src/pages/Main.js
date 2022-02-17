@@ -1,3 +1,9 @@
+import { Search } from './search';
+
 export default function Main() {
-  return <div>안녕</div>;
+  return (
+    <div>
+      <Search />
+    </div>
+  );
 }
