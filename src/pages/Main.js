@@ -1,6 +1,7 @@
 import { Search } from './search';
 import { CardList } from './itemList/index';
 import { useEffect, useState } from 'react';
+import OverAndUnder from './overandunder/OverAndUnder';
 
 export default function Main() {
   const [data, setData] = useState();
@@ -14,6 +15,7 @@ export default function Main() {
   return (
     <div>
       <Search />
+      <OverAndUnder />
       <CardList data={data} />
     </div>
   );

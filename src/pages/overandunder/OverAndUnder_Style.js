@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Countainer = styled.div`
   display: flex;
   justify-content: center;
+  margin: 20px 0px;
 `;
 
 export const OverAndUnderWrap = styled.div`
