@@ -8,7 +8,7 @@ export default function Main() {
   useEffect(() => {
     fetch('/data/data.json')
       .then(res => res.json())
-      .then(res => setData(res));
+      .then(res => setData(res.splice(0, 16)));
   }, []);
 
   return (
