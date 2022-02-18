@@ -1,10 +1,18 @@
 import React from 'react';
 import * as S from './styled';
 
-export function Search() {
+export function Search(props) {
+  const { changeText, changeInputValue, serchValue } = props;
+
   return (
     <S.SearchContainer>
-      <S.Search type="text" placeholder="원하는 제품을 검색하세요" />
+      <S.Search
+        type="text"
+        placeholder="원하는 제품을 검색하세요"
+        onChange={changeInputValue}
+        onKeyDown={serchValue}
+        value={changeText}
+      />
       <div>
         {TAG_DATA.map(list => {
           const { id, name } = list;
