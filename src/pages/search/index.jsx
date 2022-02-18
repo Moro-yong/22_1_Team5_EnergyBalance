@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Search as Presentational } from './Search';
 
-export const Search = ({ setSerchText }) => {
+export const Search = props => {
+  const { setSerchText, toggleTag, setToggleTag, choiceTag, setChoiceTag } =
+    props;
   const [changeText, setChangeText] = useState('');
 
   const changeInputValue = e => {
@@ -21,6 +23,10 @@ export const Search = ({ setSerchText }) => {
         changeText={changeText}
         changeInputValue={changeInputValue}
         serchValue={serchValue}
+        toggleTag={toggleTag}
+        setToggleTag={setToggleTag}
+        choiceTag={choiceTag}
+        setChoiceTag={setChoiceTag}
       />
     </div>
   );
