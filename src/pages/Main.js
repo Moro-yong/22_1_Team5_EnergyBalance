@@ -5,19 +5,12 @@ import OverAndUnder from './overandunder/OverAndUnder';
 
 export default function Main() {
   const [data, setData] = useState([]);
-  console.log('데이터 =>', data);
   const [serchText, setSerchText] = useState('');
-  console.log('검색내용 =>', serchText);
   const [serchFilterData, setSerchFilterData] = useState(data);
-  console.log('검색 필터링 데이터 =>', serchFilterData);
   const [finalData, setFinalData] = useState(data);
-  console.log('마지막필터 =>', finalData);
   const [tagFilterData, setTagFilterData] = useState([]);
-  console.log('태그 이름영문변환 =>', tagFilterData);
   const [toggleTag, setToggleTag] = useState(Array(8).fill(false));
-  console.log('태그 온오프 =>', toggleTag);
   const [choiceTag, setChoiceTag] = useState([]);
-  console.log('태그 이름 =>', choiceTag);
 
   useEffect(() => {
     fetch('/data/data.json')
@@ -70,13 +63,9 @@ export default function Main() {
 
     setTagFilterData(newChoiceTag);
   }, [choiceTag]);
-  // console.log(Object.keys(data[1]?.ingredient).includes('iron'));
 
-  // 성분표가 있는 데이터만 선택
-  // // console.log('성분표가 있는 데이터 =>', newData);
   useEffect(() => {
     const newData = serchFilterData.filter(x => x.ingredient);
-    console.log(newData);
     const findTagIndex = newData.map(list =>
       list.ingredient.map(
         data => data.name === tagFilterData[0] && data.percent > 0
@@ -84,9 +73,7 @@ export default function Main() {
     );
 
     const newFindTagIndex = findTagIndex.map(list => list.indexOf(true));
-
     const saveFindTagData = [];
-    console.log(saveFindTagData);
     for (let i = 0; newFindTagIndex.length >= i; i++) {
       if (newFindTagIndex[i] >= 0) {
         saveFindTagData.push(newData[i]);
@@ -97,14 +84,12 @@ export default function Main() {
 
   return (
     <div>
-      {/* <div onClick={filterIngredient}>aaa</div> */}
       <Search
         setSerchText={setSerchText}
         toggleTag={toggleTag}
         setToggleTag={setToggleTag}
         choiceTag={choiceTag}
         setChoiceTag={setChoiceTag}
-        // filterIngredient={filterIngredient}
       />
       <OverAndUnder />
       <CardList data={finalData} />
