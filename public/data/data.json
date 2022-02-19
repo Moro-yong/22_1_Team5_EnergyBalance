@@ -62,32 +62,92 @@
   {
     "id": "5",
     "name": "비타민D 1000IU 츄어블",
-    "brand": ""
+    "brand": "",
+    "ingredient": [
+      { "name": "protein", "percent": 89 },
+      { "name": "vitaminA", "percent": 224 },
+      { "name": "vitaminB", "percent": 30 },
+      { "name": "vitaminE", "percent": 34 },
+      { "name": "calcium", "percent": 37 },
+      { "name": "cooper", "percent": 79 },
+      { "name": "iron", "percent": 929 },
+      { "name": "fat", "percent": 0 }
+    ]
   },
   {
     "id": "6",
     "name": "비타민D 1000Q연질캡슐",
-    "brand": ""
+    "brand": "",
+    "ingredient": [
+      { "name": "protein", "percent": 33 },
+      { "name": "vitaminA", "percent": 214 },
+      { "name": "vitaminB", "percent": 43 },
+      { "name": "vitaminE", "percent": 72 },
+      { "name": "calcium", "percent": 38 },
+      { "name": "cooper", "percent": 178 },
+      { "name": "iron", "percent": 278 },
+      { "name": "fat", "percent": 12 }
+    ]
   },
   {
     "id": "7",
     "name": "비타민D 1080 IU",
-    "brand": ""
+    "brand": "",
+    "ingredient": [
+      { "name": "protein", "percent": 61 },
+      { "name": "vitaminA", "percent": 39 },
+      { "name": "vitaminB", "percent": 34 },
+      { "name": "vitaminE", "percent": 323 },
+      { "name": "calcium", "percent": 38 },
+      { "name": "cooper", "percent": 138 },
+      { "name": "iron", "percent": 599 },
+      { "name": "fat", "percent": 21 }
+    ]
   },
   {
     "id": "8",
     "name": "비타민D 1099IU",
-    "brand": ""
+    "brand": "",
+    "ingredient": [
+      { "name": "protein", "percent": 88 },
+      { "name": "vitaminA", "percent": 154 },
+      { "name": "vitaminB", "percent": 22 },
+      { "name": "vitaminE", "percent": 13 },
+      { "name": "calcium", "percent": 338 },
+      { "name": "cooper", "percent": 38 },
+      { "name": "iron", "percent": 218 },
+      { "name": "fat", "percent": 0 }
+    ]
   },
   {
     "id": "9",
     "name": "비타민D 2000",
-    "brand": ""
+    "brand": "",
+    "ingredient": [
+      { "name": "protein", "percent": 13 },
+      { "name": "vitaminA", "percent": 234 },
+      { "name": "vitaminB", "percent": 45 },
+      { "name": "vitaminE", "percent": 23 },
+      { "name": "calcium", "percent": 377 },
+      { "name": "cooper", "percent": 3 },
+      { "name": "iron", "percent": 998 },
+      { "name": "fat", "percent": 0 }
+    ]
   },
   {
     "id": "10",
     "name": "비타민D 2000 I.U",
-    "brand": ""
+    "brand": "",
+    "ingredient": [
+      { "name": "protein", "percent": 14 },
+      { "name": "vitaminA", "percent": 333 },
+      { "name": "vitaminB", "percent": 0 },
+      { "name": "vitaminE", "percent": 34 },
+      { "name": "calcium", "percent": 211 },
+      { "name": "cooper", "percent": 38 },
+      { "name": "iron", "percent": 298 },
+      { "name": "fat", "percent": 0 }
+    ]
   },
   {
     "id": "11",
