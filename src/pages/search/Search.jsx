@@ -11,7 +11,6 @@ export function Search(props) {
     setToggleTag,
     choiceTag,
     setChoiceTag,
-    // filterIngredient,
   } = props;
   const toggleTagFilter = [...toggleTag];
 
@@ -54,17 +53,17 @@ export function Search(props) {
       <S.TagContainer>
         <S.Tag onClick={resetTagChoice}>리셋</S.Tag>
         <div>
-          {TAG_DATA.map(list => {
+          {TAG_DATA.map((list, index) => {
             const { id, name } = list;
             return (
               <S.Tag
                 id={id}
                 key={id}
                 value={name}
+                color={toggleTagFilter[index]}
                 onClick={e => {
                   toggleTagData(e);
                   findTagData(e);
-                  // filterIngredient();
                 }}
               >
                 {name}

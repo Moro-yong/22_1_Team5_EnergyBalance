@@ -2,14 +2,8 @@ import React, { useState } from 'react';
 import { Search as Presentational } from './Search';
 
 export const Search = props => {
-  const {
-    setSerchText,
-    toggleTag,
-    setToggleTag,
-    choiceTag,
-    setChoiceTag,
-    // filterIngredient,
-  } = props;
+  const { setSerchText, toggleTag, setToggleTag, choiceTag, setChoiceTag } =
+    props;
   const [changeText, setChangeText] = useState('');
 
   const changeInputValue = e => {
@@ -33,7 +27,6 @@ export const Search = props => {
         setToggleTag={setToggleTag}
         choiceTag={choiceTag}
         setChoiceTag={setChoiceTag}
-        // filterIngredient={filterIngredient}
       />
     </div>
   );
