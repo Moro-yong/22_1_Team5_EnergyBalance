@@ -6,6 +6,11 @@ export const SearchContainer = styled.section`
   justify-content: center;
   align-items: center;
 `;
+export const TagContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 export const Search = styled.input`
   width: 50vw;
   height: 40px;

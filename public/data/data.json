@@ -5,9 +5,24 @@
     "brand": "",
     "ingredient": {
       "id": "item_1",
+      "protein": 27,
+      "vitaminA": 46,
+      "vitaminB": 23,
+      "vitaminE": 74,
+      "calcium": 86,
+      "cooper": 5,
+      "iron": 15,
+      "fat": 57
+    }
+  },
+  {
+    "id": "2",
+    "name": "마그네슘정",
+    "brand": "",
+    "ingredient": {
+      "id": "item_1",
       "protein": 25,
       "vitaminA": 4,
-      "vitaminB": 75,
       "vitaminE": 15,
       "calcium": 64,
       "cooper": 100,
@@ -16,19 +31,34 @@
     }
   },
   {
-    "id": "2",
-    "name": "마그네슘정",
-    "brand": ""
-  },
-  {
     "id": "3",
     "name": "비타민D 1000IU",
-    "brand": ""
+    "brand": "",
+    "ingredient": {
+      "id": "item_1",
+      "protein": 26,
+      "vitaminA": 4,
+      "vitaminB": 33,
+      "vitaminE": 88,
+      "calcium": 12,
+      "cooper": 13,
+      "iron": 74
+    }
   },
   {
     "id": "4",
     "name": "비타민D 1000IU VitaminD 1000IU",
-    "brand": ""
+    "brand": "",
+    "ingredient": {
+      "id": "item_1",
+      "protein": 25,
+      "vitaminA": 4,
+      "vitaminB": 75,
+      "vitaminE": 15,
+      "calcium": 64,
+      "cooper": 100,
+      "fat": 57
+    }
   },
   {
     "id": "5",
