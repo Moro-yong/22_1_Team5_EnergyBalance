@@ -5,21 +5,19 @@ import OverAndUnder from './overandunder/OverAndUnder';
 
 export default function Main() {
   const [data, setData] = useState([]);
-  // console.log('데이터 =>', data);
+  console.log('데이터 =>', data);
+  const [serchText, setSerchText] = useState('');
+  console.log('검색내용 =>', serchText);
   const [serchFilterData, setSerchFilterData] = useState(data);
-  // console.log('필터링 데이터 =>', serchFilterData);
+  console.log('검색 필터링 데이터 =>', serchFilterData);
   const [finalData, setFinalData] = useState(data);
-  // console.log('마지막필터 =>', finalData);
+  console.log('마지막필터 =>', finalData);
   const [tagFilterData, setTagFilterData] = useState([]);
   console.log('태그 이름영문변환 =>', tagFilterData);
-  const [serchText, setSerchText] = useState('');
-  // console.log('검색내용 =>', serchText);
-  // const [toggleTag, setToggleTag] = useState(Array(9).fill(false));
-  // console.log('태그 온오프 =>', toggleTag);
-  const [toggleTag, setToggleTag] = useState(Array(9).fill(false));
-  // console.log('태그 온오프 =>', toggleTag);
+  const [toggleTag, setToggleTag] = useState(Array(8).fill(false));
+  console.log('태그 온오프 =>', toggleTag);
   const [choiceTag, setChoiceTag] = useState([]);
-  // console.log('태그 이름 =>', choiceTag);
+  console.log('태그 이름 =>', choiceTag);
 
   useEffect(() => {
     fetch('/data/data.json')
@@ -72,57 +70,44 @@ export default function Main() {
 
     setTagFilterData(newChoiceTag);
   }, [choiceTag]);
+  // console.log(Object.keys(data[1]?.ingredient).includes('iron'));
 
-  // const finalData22 = data.filter(dataList =>
-  //   Object.key(dataList.ingredient).includes('iron')
-  // );
+  // 성분표가 있는 데이터만 선택
+  // // console.log('성분표가 있는 데이터 =>', newData);
+  useEffect(() => {
+    const newData = serchFilterData.filter(x => x.ingredient);
+    console.log(newData);
+    const findTagIndex = newData.map(list =>
+      list.ingredient.map(
+        data => data.name === tagFilterData[0] && data.percent > 0
+      )
+    );
 
-  // console.log(finalData22);
+    const newFindTagIndex = findTagIndex.map(list => list.indexOf(true));
 
-  // useEffect(() => {
-  //   // 성분표가 있는 데이터만 선택
-  //   const newData = data.filter(x => x.ingredient);
-  //   // console.log(newData);
-
-  //   // 성분표에 있는지 없는지 확인
-  //   // const newArr = newData.map(list => {
-  //   //   for (let i = 0; tagFilterData.length >= i; i++) {
-  //   //     Object.keys(list.ingredient).includes(tagFilterData[i]);
-  //   //   }
-  //   // });
-  //   // console.log(newArr);
-
-  //   // 성분표만 분류하여 배열로 생성
-  //   const newArr = newData.map(list => Object.keys(list.ingredient));
-  //   // console.log(newArr);
-
-  //   // 성분표에 태그가 포함되는지
-  //   // const final = () => {
-  //   //   newArr
-  //   // };
-  //   // console.log(final);
-
-  //   setFinalData();
-  // }, [data]);
-
-  // // let array = [0, 1, 2, 3, 4]; //tags
-  // // console.log(
-  // //   array.some(function (elem) {
-  // //     return elem === 0;
-  // //   })
-  // // );
+    const saveFindTagData = [];
+    console.log(saveFindTagData);
+    for (let i = 0; newFindTagIndex.length >= i; i++) {
+      if (newFindTagIndex[i] >= 0) {
+        saveFindTagData.push(newData[i]);
+      }
+    }
+    setFinalData(saveFindTagData);
+  }, [tagFilterData, serchFilterData]);
 
   return (
     <div>
+      {/* <div onClick={filterIngredient}>aaa</div> */}
       <Search
         setSerchText={setSerchText}
         toggleTag={toggleTag}
         setToggleTag={setToggleTag}
         choiceTag={choiceTag}
         setChoiceTag={setChoiceTag}
+        // filterIngredient={filterIngredient}
       />
       <OverAndUnder />
-      <CardList data={serchFilterData} />
+      <CardList data={finalData} />
     </div>
   );
 }

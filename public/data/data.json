@@ -3,62 +3,61 @@
     "id": "1",
     "name": "6년근고려홍삼정스틱",
     "brand": "",
-    "ingredient": {
-      "id": "item_1",
-      "protein": 27,
-      "vitaminA": 46,
-      "vitaminB": 23,
-      "vitaminE": 74,
-      "calcium": 86,
-      "cooper": 5,
-      "iron": 15,
-      "fat": 57
-    }
+    "ingredient": [
+      { "name": "protein", "percent": 63 },
+      { "name": "vitaminA", "percent": 124 },
+      { "name": "vitaminB", "percent": 0 },
+      { "name": "vitaminE", "percent": 73 },
+      { "name": "calcium", "percent": 378 },
+      { "name": "cooper", "percent": 78 },
+      { "name": "iron", "percent": 2378 },
+      { "name": "fat", "percent": 0 }
+    ]
   },
   {
     "id": "2",
     "name": "마그네슘정",
     "brand": "",
-    "ingredient": {
-      "id": "item_1",
-      "protein": 25,
-      "vitaminA": 4,
-      "vitaminE": 15,
-      "calcium": 64,
-      "cooper": 100,
-      "iron": 86,
-      "fat": 57
-    }
+    "ingredient": [
+      { "name": "protein", "percent": 96 },
+      { "name": "vitaminA", "percent": 0 },
+      { "name": "vitaminB", "percent": 185 },
+      { "name": "vitaminE", "percent": 346 },
+      { "name": "calcium", "percent": 0 },
+      { "name": "cooper", "percent": 26 },
+      { "name": "iron", "percent": 1 },
+      { "name": "fat", "percent": 245 }
+    ]
   },
   {
     "id": "3",
     "name": "비타민D 1000IU",
     "brand": "",
-    "ingredient": {
-      "id": "item_1",
-      "protein": 26,
-      "vitaminA": 4,
-      "vitaminB": 33,
-      "vitaminE": 88,
-      "calcium": 12,
-      "cooper": 13,
-      "iron": 74
-    }
+    "ingredient": [
+      { "name": "protein", "percent": 12 },
+      { "name": "vitaminA", "percent": 7 },
+      { "name": "vitaminB", "percent": 23 },
+      { "name": "vitaminE", "percent": 868 },
+      { "name": "calcium", "percent": 0 },
+      { "name": "cooper", "percent": 78 },
+      { "name": "iron", "percent": 0 },
+      { "name": "fat", "percent": 737 }
+    ]
   },
   {
     "id": "4",
     "name": "비타민D 1000IU VitaminD 1000IU",
     "brand": "",
-    "ingredient": {
-      "id": "item_1",
-      "protein": 25,
-      "vitaminA": 4,
-      "vitaminB": 75,
-      "vitaminE": 15,
-      "calcium": 64,
-      "cooper": 100,
-      "fat": 57
-    }
+    "ingredient": [
+      { "name": "protein", "percent": 0 },
+      { "name": "vitaminA", "percent": 76 },
+      { "name": "vitaminB", "percent": 9674 },
+      { "name": "vitaminE", "percent": 1257 },
+      { "name": "calcium", "percent": 111 },
+      { "name": "cooper", "percent": 93 },
+      { "name": "iron", "percent": 1296 },
+      { "name": "fat", "percent": 0 }
+    ]
   },
   {
     "id": "5",

@@ -11,6 +11,7 @@ export function Search(props) {
     setToggleTag,
     choiceTag,
     setChoiceTag,
+    // filterIngredient,
   } = props;
   const toggleTagFilter = [...toggleTag];
 
@@ -18,11 +19,7 @@ export function Search(props) {
     const EVENT_ID = e.target.id;
     const INDEX = Number(EVENT_ID.substr(4, EVENT_ID.length) - 1);
 
-    if (toggleTagFilter[INDEX] === false) {
-      toggleTagFilter[INDEX] = true;
-    } else if (toggleTagFilter[INDEX] === true) {
-      toggleTagFilter[INDEX] = false;
-    }
+    toggleTagFilter[INDEX] = !toggleTagFilter[INDEX];
     setToggleTag(toggleTagFilter);
   };
 
@@ -41,7 +38,7 @@ export function Search(props) {
   };
 
   const resetTagChoice = () => {
-    setToggleTag(Array(9).fill(false));
+    setToggleTag(Array(8).fill(false));
     setChoiceTag([]);
   };
 
@@ -67,6 +64,7 @@ export function Search(props) {
                 onClick={e => {
                   toggleTagData(e);
                   findTagData(e);
+                  // filterIngredient();
                 }}
               >
                 {name}
